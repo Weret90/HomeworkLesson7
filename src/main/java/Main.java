@@ -17,6 +17,9 @@ public class Main {
 
         Cat errorCat = new Cat("Роджер", -2);
         System.out.println(errorCat.getAppetite()); //если в конструкторе укажут нулевое или отрицательное значение, аппетит будет установлен в 5 стандартных единиц
+
+        Plate errorPlate = new Plate(-20); //отрицательная еда в миске изменит значение на плюсовое
+        errorPlate.info();
     }
 
     public static void eatTime(Plate plate, Cat[] cats) {

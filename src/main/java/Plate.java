@@ -2,7 +2,12 @@ public class Plate {
     private int food;
 
     public Plate(int food) {
-        this.food = food;
+        if (food < 0) {
+            System.out.println("Нельзя иметь в тарелке отрицательное количество еды, значение будет изменено на плюсовое");
+            this.food = -food;
+        } else {
+            this.food = food;
+        }
     }
 
     public void info() {
